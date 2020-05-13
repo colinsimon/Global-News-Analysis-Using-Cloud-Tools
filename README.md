@@ -56,8 +56,19 @@ https://blog.gdeltproject.org/the-datasets-of-gdelt-as-of-february-2016/
 - Explore Data
 - Clean
 - Feature Engineering
-- Model
+- Models:
+    - Data Analysis:
+        - quantity of shortage themes over time
+    - Time-series:
+        - difference data
+        - forecast data
+    - Unsupervised:
+        - Cluster by time
+        - Cluster by location
+        - Cluster by tone severity
+        - Cluster by multiple
 - Evaluate
+    - 
 - Conclusions & Recommendations
 
 
