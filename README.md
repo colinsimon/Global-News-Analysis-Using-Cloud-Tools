@@ -36,6 +36,7 @@ https://blog.gdeltproject.org/the-datasets-of-gdelt-as-of-february-2016/
 - Finish gathering and concatenating data
 - Conduct any remaining cleaning
 - Get mapping program to work
+- Fit mapping to GKG instead of Events dataset
 - Find high-resolution world map shapefile
 - Modeling:
     - Time series modeling?
