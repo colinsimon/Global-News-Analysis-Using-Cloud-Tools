@@ -73,7 +73,9 @@ https://blog.gdeltproject.org/the-datasets-of-gdelt-as-of-february-2016/
 
 
 
-
+# Presentation
+-  Histogram of Polarity between 0 and 100
+-  Slider of histogram of polarity over time
 
 
 
