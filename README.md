@@ -1,10 +1,11 @@
 README for Project 5 (group project)
 
-# Notes
+
+
+# Notes about datasets
 - Official column headers are here:
 https://www.gdeltproject.org/data/lookups/CSV.header.dailyupdates.txt
 - These are good for April 2013 - present so should be good for us
-
 - Column headers in .xlsx format:
 https://www.gdeltproject.org/data/lookups/CSV.header.fieldids.xlsx
 
@@ -31,104 +32,50 @@ https://blog.gdeltproject.org/the-datasets-of-gdelt-as-of-february-2016/
 - We don't have to use AWS, they have other tools: https://www.gdeltproject.org/#downloading
 
 
-
-
-
 # TO-DO list
-- We need to download and concatenate the files
-- We need to figure out whether we are downloading to our personal machines or doing it straight from AWS storage "S3 bucket"
-- Need to figure out Geopandas or some other mapping system
-- Last cohort's project had a good example for Colorado, but of course we are more interested in world domination:
-https://github.com/magnusbig/fema_7_lifelines/blob/master/code/flood_zones.ipynb
-
-- A good place to start might be to download one file from Jan, one from Feb...etc and then map them quickly so we know what we are dealing with.
-
-
-
-
-
-
-
-# AWS:
-- There are a LOT of AWS tools. Here are some:
-https://us-east-2.console.aws.amazon.com/dataexchange/home?region=us-east-2#/
-
-- The data is stored in "S3" which seems to be the most widely-used AWS storage product.
-
-#### Some options for the computing part. All of these are going to require learning:
-    - EC2 which is the most generic, this is what we demo'd in class
-    - Athena which SQL queries stuff directly
-    - Lambda which runs your code against the S3 data directly
-    - Sagemaker which has ML tools for running it directly
-
-
-
-- I saved EC2 directions below:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# AWS TERMINAL COMMANDS:
-
-#### SETUP
-#### Terminal connecting to Server steps:
-- Use security key:
-sudo chmod 700 /path/to/key.pem
-
-- Connect to server:
-ssh -i /path/to/key./pm ubutnu@<<<public DNS from AWS>>>
-
-- Install Anaconda:
-wget http://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh
-
-- Execute Installer 
-bash <<<use tab to find file below>>>
+- Finish gathering and concatenating data
+- Conduct any remaining cleaning
+- Get mapping program to work
+- Fit mapping to GKG instead of Events dataset
+- Find high-resolution world map shapefile
+- Modeling:
+    - Time series modeling?
+    - Unsupervised methods??
+- Evaluate??
+    - Pick specific world news items and see if the map shows it?
+- Conclusions/Recommendations
+    - How good is the GDELT GKG data set for illuminating commodity shortages/gluts during disasters?
+    - Would other GKG data sets be worthwhile?
+    - Further steps?
     
-- COPY SPACE AT END:
-bash Anaconda3-4.1.1-Linux-x86_64.sh 
-
-- Yes to all
-Make sure to enter yes to install location to path in Home ubuntu
-
-- Locate conda
-source ~/.bashrc
-
-- Optional??? Open bash rc
-nano ~/bash.rc
-    
-#### NOW LETS GO
-
-- LOCAL MACHINE:
-THIS IS THE COMPLEX ONE - NOTE SPACES:
-scp -i /path/to/key.pem /path/to/model.py ubuntu@<<<public DNS from AWS>>>:~
-
-- CLOUD MACHINE:
-Run File
-python 3 model.py
-
-- Edit File
-nano model.py
-
-- Rerun as needed
 
 
-#### MOVE FILES FROM REMOTE TO LOCAL
-scp -i /path/to/key.pem ubuntu@<<<DNS from AWS>>>:~/output.csv .
+# Traditional DS WORKFLOW
+- Problem Statement
+- Gather Data
+- Explore Data
+- Clean
+- Feature Engineering
+- Models:
+    - Data Analysis:
+        - quantity of shortage themes over time
+    - Time-series:
+        - difference data
+        - forecast data
+    - Unsupervised:
+        - Cluster by time
+        - Cluster by location
+        - Cluster by tone severity
+        - Cluster by multiple
+- Evaluate
+    - 
+- Conclusions & Recommendations
 
-#### REMEMBER TO TERMINATE INSTANCE!!!
+
+
+# Presentation
+-  Histogram of Polarity between 0 and 100
+-  Slider of histogram of polarity over time
+
+
+
