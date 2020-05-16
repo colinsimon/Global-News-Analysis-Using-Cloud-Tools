@@ -21,7 +21,10 @@ Using data science to identify commodity supply events using global news data.
   -  1,100 rows, 11 columns
 
 # Mapping
-
+- For this project, mapping serves three purposes:
+  1. EDA: To understand the data
+  2. To present the data to any audience
+  3. As a means of analytics/data science. While not predictive, given the nature of the dataset, this is crucial.
 
 # Models and Techniques
 - The goal of our modeling was to use K-Means Clustering, PCA and CountVectorizer to  find a classification model that performed best when classifying the month of the year an article was written. A pipeline of various parameters was run through a GridSearch on the following models:
